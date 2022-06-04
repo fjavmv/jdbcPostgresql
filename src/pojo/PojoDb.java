@@ -22,6 +22,6 @@ public class PojoDb {
    // public  static  final String QUERY_ELIMINAR_TODO = "DELETE FROM usuarios";
     //-- Para borrar un conjunto de registros
     public  static  final String QUERY_ELIMINAR = "DELETE FROM usuarios WHERE id_usuario = %d";
-    public static String QUERY_UPDATE = "UPDATE usuarios SET nombre_usuario = %s, apellido_paterno = %s, apellido_materno = %s, edad_usuario = %d, sexo_usuario = %s, telefono_usuario = %s, email_usuario = %s WHERE id_usuario = %d";
+    public static String QUERY_UPDATE = "UPDATE usuarios SET nombre_usuario = '%s', apellido_paterno = '%s', apellido_materno = '%s', edad_usuario = %d, sexo_usuario = '%s', telefono_usuario = '%s', email_usuario = '%s' WHERE id_usuario = %d;";
 
 }

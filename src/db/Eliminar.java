@@ -8,13 +8,12 @@ import static pojo.PojoDb.*;
 
 public class Eliminar {
     public static void eliminar(int id){
-        int dat = 0;
         Connection connection = ConexionDb.conectar();
         boolean conValida = true;
         try{
             if(conValida == connection.isValid(2000)){
                 Statement declaracion = connection.createStatement();
-                dat = declaracion.executeUpdate(String.format(QUERY_ELIMINAR,id));
+                declaracion.executeUpdate(String.format(QUERY_ELIMINAR,id));
             }else {
                 System.out.println(TEST_FAIL);
             }
@@ -23,6 +22,6 @@ public class Eliminar {
             System.err.println(e.getClass().getName() + ":" + e.getMessage());
             System.exit(0);
         }
-        System.out.printf("\nRegistro Eliminado id:  %d, estado: %d ",id,dat);
+
     }
 }

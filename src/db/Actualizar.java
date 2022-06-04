@@ -7,14 +7,13 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import static pojo.PojoDb.*;
 public class Actualizar {
-    public static void actualizar(Usuario us){
+    public static void actualizar(Usuario us,int id) {
         Connection connection = ConexionDb.conectar() ;
-        int dat = 0;
         boolean conValid = true;
         try{
+            Statement declaracion =connection.createStatement();
             if(conValid == connection.isValid(2000)){
-                Statement declaracion = connection.createStatement();
-                dat = declaracion.executeUpdate(String.format(QUERY_UPDATE, us.getNombreUsuario(),us.getApellidoPaterno(), us.getApellidoMaterno(), us.getEdadUsuario(), us.getSexoUsuario(), us.getTelefonoUsuario(), us.getEmailUsuario(),us.getIdUsuario()));
+                declaracion.executeUpdate(String.format(QUERY_UPDATE,us.getNombreUsuario(),us.getApellidoPaterno(), us.getApellidoMaterno(), us.getEdadUsuario(), us.getSexoUsuario(), us.getTelefonoUsuario(), us.getEmailUsuario(),id));
                 ConexionDb.cerrarConexion(connection,declaracion);
             }
             else {
@@ -24,6 +23,5 @@ public class Actualizar {
             System.err.println(e.getClass().getName() + ":" + e.getMessage());
             System.exit(0);
         }
-        System.out.printf("\nLos datos se han actualizado para el id: %d con estado: %d", us.getIdUsuario(),dat);
     }
 }

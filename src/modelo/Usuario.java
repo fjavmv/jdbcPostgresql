@@ -10,7 +10,7 @@ public class Usuario {
     private String telefonoUsuario;
     private String emailUsuario;
 
-    public Usuario(int idUsuario, String nombreUsuario, String apellidoPaterno, String apellidoMaterno, int edadUsuario, String sexoUsuario, String telefonoUsuario, String emailUsuario) {
+     public Usuario(int idUsuario, String nombreUsuario, String apellidoPaterno, String apellidoMaterno, int edadUsuario, String sexoUsuario, String telefonoUsuario, String emailUsuario) {
         this.idUsuario = idUsuario;
         this.nombreUsuario = nombreUsuario;
         this.apellidoPaterno = apellidoPaterno;
@@ -31,14 +31,10 @@ public class Usuario {
         this.emailUsuario = emailUsuario;
     }
 
-    public Usuario(){
-
+    public Usuario(int idUsuario) {
+         this.idUsuario = idUsuario;
     }
 
-    public Usuario(int idUsuario){
-        this();
-        this.idUsuario = idUsuario;
-    }
 
     public int getIdUsuario() {
         return idUsuario;

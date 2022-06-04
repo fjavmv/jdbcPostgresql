@@ -24,48 +24,52 @@ public class View {
         System.out.println("**********************************************************\n");
         int op = scanner.nextInt();
         Usuario user;
-        switch (op){
-            case 1:
+        switch (op) {
+            case 1:{
                 System.out.println("Ingresa el ID a consultar:  \n");
                 user = new Usuario(scanner.nextInt());
                 ArrayList<Usuario> usuariosId = Consultar.consultarPorId(user.getIdUsuario());
                 System.out.println(usuariosId.get(0).toString());
+                System.out.println("Consulta exitosa...........");
                 menuDeOpciones();
-                break;
-            case 2:
+            }
+            case 2: {
                 ArrayList<Usuario> usuarios = Consultar.consultar();
                 for (Usuario usuario : usuarios) {
                     System.out.println(usuario.toString());
                     System.out.println(" ");
                 }
+                System.out.println("Consulta exitosa...........");
                 menuDeOpciones();
-                break;
-            case 3:
+            }
+            case 3: {
                 System.out.println("Ingresa los datos a registrar:  \n");
                 Insertar.insertarElementos(DatosView.capturaDatos());
                 menuDeOpciones();
-                break;
-            case 4:
+            }
+            case 4: {
                 System.out.println("Ingresa el ID a actualizar:  \n");
-                new Usuario(scanner.nextInt());
-                Actualizar.actualizar(DatosView.capturaDatos());
+                int id = scanner.nextInt();
+                Actualizar.actualizar(DatosView.capturaDatos(),id);
+                System.out.println("Actualización finalizada................");
                 menuDeOpciones();
-                break;
-            case 5:
+            }
+            case 5: {
                 System.out.println("Ingresa el ID a eliminar:  \n");
                 user = new Usuario(scanner.nextInt());
                 Eliminar.eliminar(user.getIdUsuario());
+                System.out.println("Se ha eliminado el registro con id: "+user.getIdUsuario());
                 menuDeOpciones();
-                break;
-            case 6:
+            }
+            case 6: {
                 System.exit(0);
                 System.out.println("Programa finalizado..................");
-                break;
-            default:
+            }
+            default: {
                 System.out.println("Opcion invalida.....\n");
                 System.out.println(" ");
                 menuDeOpciones();
-                break;
+            }
         }
 
     }
@@ -76,7 +80,7 @@ public class View {
             Scanner scanner = new Scanner(System.in);
             System.out.println("Introduce los datos a registrar o actualizar:\n");
             System.out.println("Introduce el nombre de usuario:");
-            String nombreUsuario = scanner.next();
+            String nombreUsuario = scanner.nextLine();
             System.out.println("Introduce apellido paterno:");
             String apellidoPaterno =scanner.next();
             System.out.println("Introduce apellido materno:");
