@@ -1,6 +1,6 @@
 package conexion;
 
-import static pojo.PojoDb.*;
+import static utilidades.UtilidadesDb.*;
 import java.sql.*;
 
 public class ConexionDb {

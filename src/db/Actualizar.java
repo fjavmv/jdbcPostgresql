@@ -1,11 +1,11 @@
 package db;
 
 import conexion.ConexionDb;
-import modelo.Usuario;
+import POJO.Usuario;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import static pojo.PojoDb.*;
+import static utilidades.UtilidadesDb.*;
 public class Actualizar {
     public static void actualizar(Usuario us,int id) {
         Connection connection = ConexionDb.conectar() ;

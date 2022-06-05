@@ -1,5 +1,5 @@
-package pojo;
-public class PojoDb {
+package utilidades;
+public class UtilidadesDb {
     //Datos de para conectar a la Db//////////////////////////
     public static final String DRIVER = "org.postgresql.Driver";
     private static final String HOST = "localhost";

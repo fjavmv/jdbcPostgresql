@@ -1,4 +1,4 @@
-package modelo;
+package POJO;
 
 public class Usuario {
     private  int idUsuario;

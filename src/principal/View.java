@@ -4,7 +4,7 @@ import db.Actualizar;
 import db.Consultar;
 import db.Eliminar;
 import db.Insertar;
-import modelo.Usuario;
+import POJO.Usuario;
 import java.util.ArrayList;
 import java.util.Scanner;
 

@@ -1,13 +1,13 @@
 package db;
 
 import conexion.ConexionDb;
-import modelo.Usuario;
+import POJO.Usuario;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
-import static pojo.PojoDb.*;
+import static utilidades.UtilidadesDb.*;
 
 public class Consultar {
     //Esto es una clase interna

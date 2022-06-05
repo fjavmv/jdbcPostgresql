@@ -4,7 +4,7 @@ import conexion.ConexionDb;
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
-import static pojo.PojoDb.*;
+import static utilidades.UtilidadesDb.*;
 
 public class Eliminar {
     public static void eliminar(int id){
