@@ -16,7 +16,7 @@ public class UtilidadesDb {
     public static final String CONEXION_EXITOSA = "La conexión a las DB ha sido exitosa....";
     //Consulta
     public static final String QUERY_USUARIOS = "SELECT id_usuario, nombre_usuario, apellido_paterno, apellido_materno, edad_usuario, sexo_usuario, telefono_usuario, email_usuario FROM usuarios ORDER BY id_usuario ASC;";
-    public static final String QUERY_ID = "SELECT id_usuario, nombre_usuario, apellido_paterno, apellido_materno, edad_usuario, sexo_usuario, telefono_usuario, email_usuario FROM usuarios WHERE id_usuario = %s ;";
+    public static final String QUERY_ID = "SELECT id_usuario, nombre_usuario, apellido_paterno, apellido_materno, edad_usuario, sexo_usuario, telefono_usuario, email_usuario FROM usuarios WHERE id_usuario = %d ;";
     public static final String QUERY_INSERT= "INSERT INTO usuarios (nombre_usuario, apellido_paterno, apellido_materno, edad_usuario, sexo_usuario, telefono_usuario, email_usuario) VALUES ('%s','%s','%s',%d,'%s','%s','%s');";
     //-- Para eliminar todo
    // public  static  final String QUERY_ELIMINAR_TODO = "DELETE FROM usuarios";

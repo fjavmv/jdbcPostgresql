@@ -10,6 +10,10 @@ public class Usuario {
     private String telefonoUsuario;
     private String emailUsuario;
 
+    public Usuario(){
+
+    }
+
      public Usuario(int idUsuario, String nombreUsuario, String apellidoPaterno, String apellidoMaterno, int edadUsuario, String sexoUsuario, String telefonoUsuario, String emailUsuario) {
         this.idUsuario = idUsuario;
         this.nombreUsuario = nombreUsuario;
@@ -59,6 +63,38 @@ public class Usuario {
     }
     public String getEmailUsuario() {
         return emailUsuario;
+    }
+
+    public void setIdUsuario(int idUsuario) {
+        this.idUsuario = idUsuario;
+    }
+
+    public void setNombreUsuario(String nombreUsuario) {
+        this.nombreUsuario = nombreUsuario;
+    }
+
+    public void setApellidoPaterno(String apellidoPaterno) {
+        this.apellidoPaterno = apellidoPaterno;
+    }
+
+    public void setApellidoMaterno(String apellidoMaterno) {
+        this.apellidoMaterno = apellidoMaterno;
+    }
+
+    public void setEdadUsuario(int edadUsuario) {
+        this.edadUsuario = edadUsuario;
+    }
+
+    public void setSexoUsuario(String sexoUsuario) {
+        this.sexoUsuario = sexoUsuario;
+    }
+
+    public void setTelefonoUsuario(String telefonoUsuario) {
+        this.telefonoUsuario = telefonoUsuario;
+    }
+
+    public void setEmailUsuario(String emailUsuario) {
+        this.emailUsuario = emailUsuario;
     }
 
     @Override

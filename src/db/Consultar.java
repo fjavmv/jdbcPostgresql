@@ -41,7 +41,7 @@ public class Consultar {
         ResultSet rs;
         boolean conValida = true;
         try {
-            if(conValida == connection.isValid(2000)){
+            if(conValida == connection.isValid(1000)){
                 //Realizar la consulta a la db
                 Statement declaracion = connection.createStatement();
                 rs = declaracion.executeQuery(QUERY_USUARIOS);

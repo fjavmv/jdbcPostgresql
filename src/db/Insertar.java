@@ -2,7 +2,6 @@ package db;
 
 import conexion.ConexionDb;
 import POJO.Usuario;
-
 import java.sql.Connection;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -10,6 +9,7 @@ import static utilidades.UtilidadesDb.*;
 
 public class Insertar {
     public static void insertarElementos(Usuario us) {
+        //Almacena un valo de retorno del método executeUpdate()
         int dat = 0;
         Connection connection = ConexionDb.conectar();
         boolean conValida = true;

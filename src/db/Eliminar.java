@@ -14,6 +14,7 @@ public class Eliminar {
             if(conValida == connection.isValid(2000)){
                 Statement declaracion = connection.createStatement();
                 declaracion.executeUpdate(String.format(QUERY_ELIMINAR,id));
+                ConexionDb.cerrarConexion(connection,declaracion);
             }else {
                 System.out.println(TEST_FAIL);
             }
